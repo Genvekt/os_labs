@@ -1,0 +1,11 @@
+    1  mkdir week1
+    2  rm -r week1
+    3  ls
+    4  cd tmp
+    5  mkdir week1
+    6  cd week1/
+    7  greb gcc /usr/bin | sort -r > ex1.txt
+    8  grep gcc /usr/bin | sort -r > ex1.txt
+    9  grep -s gcc /usr/bin | sort -r > ex1.txt
+   10  grep -s gcc /usr/bin/ | sort -r > ex1.txt
+   11  history > ex2.txt
