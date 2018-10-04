@@ -1,0 +1,2 @@
+text	data	bss	dec	hex	filename
+1847	584	8	2439	987	ex2.o
