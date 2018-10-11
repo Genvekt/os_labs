@@ -1,0 +1,4 @@
+Physical adress - the adress of physical block of memory which can be actually accessed and modified.
+
+Virtual adress - the adress from virtual adress space. It is defined by OS and Memody Management System,
+can be out of boundary of actual memory the computer has.

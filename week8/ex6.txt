@@ -1,0 +1,5 @@
+Page size is 8KB. That mean that the offset of 16 bit adress is 13 bit (from 0 to 8191).
+The rest of adress (3 bit) is used us index in page table.
+So there will be 8 entities stored in this table. (indexes from 0 to 7)
+
+Answer: 8
