@@ -1,0 +1,11 @@
+To increase hit/miss ratio: 
+	Sequense must have a lot of duplications and a lot of calls of page that was already referensed resently in nearest future
+	(e.g. 100 100 100 100 200 200 100 300 200 is better than 100 300 145 140 200 500, 600)
+To decrease hit/miss ratio:
+	The page called resently must be called in as big amount of time us possible
+	Plus sequense must have as small amount of repetitions as possible
+	(e.g. 100 200 300 400 100 200 is worser than 100 100 200 200 300 400)
+
+My sequenses:
+To increase - sort sequense by page id
+To decrease - place repetitions as far from each onter as possible
