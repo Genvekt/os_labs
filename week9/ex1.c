@@ -26,9 +26,9 @@ int main(){
     int page_id = 0,found = 0,low_counter = 256,low_id = -1;
     double miss = 0,hit = 0;
 
+    fscanf(input,"%d",&page_id);
     while(!feof (input)){
         //read page id from file
-        fscanf(input,"%d",&page_id);
 
         low_counter = 256; 
         low_id = -1;
@@ -39,14 +39,20 @@ int main(){
 
             //if empty place, remember it
             if(buffer[i].p_id == -1){
+                if(low_counter>=0){
                     low_counter = -1;
                     low_id = i;
+                }
+            }
+
+            //find page with the lowest counter
+            if(buffer[i].counter<low_counter){
+                low_counter = buffer[i].counter;
+                low_id = i;
             }
 
             //shift current counter
-            else{
-                buffer[i].counter = buffer[i].counter/2;
-            }
+            buffer[i].counter = buffer[i].counter/2;
 
             //add 1 to left most bit if this page is referenced
             if(buffer[i].p_id == page_id){
@@ -54,11 +60,6 @@ int main(){
                 found = 1;
             }
 
-            //find page with thr lowest counter
-            if(buffer[i].counter<low_counter){
-                low_counter = buffer[i].counter;
-                low_id = i;
-            }
         }
 
         //if page not found, replace with one with the lowest counter
@@ -69,12 +70,12 @@ int main(){
         }
         //if page is found, it is ok
         else{
-            
             hit += 1;
         }
-
+         fscanf(input,"%d",&page_id);
+    
     }
 
     fclose(input);
-    printf("%lf\n",hit/miss);
+    printf("Hit/miss rate: %lf\nHit = %lf\nMiss = %lf\n",hit/miss, hit, miss);
 }
