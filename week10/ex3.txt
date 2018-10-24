@@ -1,0 +1,40 @@
+total 24
+-rw-r--r-- 3 e.kivotova domain users  3 Oct 24 19:10 _ex1.txt
+-rw-r--r-- 3 e.kivotova domain users  3 Oct 24 19:10 _ex1_1.txt
+-rw-r--r-- 3 e.kivotova domain users  3 Oct 24 19:10 _ex1_2.txt
+-rw-r--r-- 1 e.kivotova domain users 11 Oct 24 19:31 _ex3.txt
+-rw-r--r-- 1 e.kivotova domain users 55 Oct 24 19:15 ex1.txt
+-rw-r--r-- 1 e.kivotova domain users 11 Oct 24 19:26 ex2.txt
+-rw-r--r-- 1 e.kivotova domain users  0 Oct 24 20:00 ex3.txt
+chmod a=rw- _ex3.txt
+total 28
+-rw-r--r-- 3 e.kivotova domain users   3 Oct 24 19:10 _ex1.txt
+-rw-r--r-- 3 e.kivotova domain users   3 Oct 24 19:10 _ex1_1.txt
+-rw-r--r-- 3 e.kivotova domain users   3 Oct 24 19:10 _ex1_2.txt
+-rw-rw-rw- 1 e.kivotova domain users  11 Oct 24 19:31 _ex3.txt
+-rw-r--r-- 1 e.kivotova domain users  55 Oct 24 19:15 ex1.txt
+-rw-r--r-- 1 e.kivotova domain users  11 Oct 24 19:26 ex2.txt
+-rw-r--r-- 1 e.kivotova domain users 465 Oct 24 20:02 ex3.txt
+chmod u=rwx _ex3.txt
+chmod o=rwx _ex3.txt
+total 28
+-rw-r--r-- 3 e.kivotova domain users   3 Oct 24 19:10 _ex1.txt
+-rw-r--r-- 3 e.kivotova domain users   3 Oct 24 19:10 _ex1_1.txt
+-rw-r--r-- 3 e.kivotova domain users   3 Oct 24 19:10 _ex1_2.txt
+-rwxrw-rwx 1 e.kivotova domain users  11 Oct 24 19:31 _ex3.txt
+-rw-r--r-- 1 e.kivotova domain users  55 Oct 24 19:15 ex1.txt
+-rw-r--r-- 1 e.kivotova domain users  11 Oct 24 19:26 ex2.txt
+-rw-r--r-- 1 e.kivotova domain users 958 Oct 24 20:05 ex3.txt
+chmod g=u _ex3.txt
+total 28
+-rw-r--r-- 3 e.kivotova domain users    3 Oct 24 19:10 _ex1.txt
+-rw-r--r-- 3 e.kivotova domain users    3 Oct 24 19:10 _ex1_1.txt
+-rw-r--r-- 3 e.kivotova domain users    3 Oct 24 19:10 _ex1_2.txt
+-rwxrwxrwx 1 e.kivotova domain users   11 Oct 24 19:31 _ex3.txt
+-rw-r--r-- 1 e.kivotova domain users   55 Oct 24 19:15 ex1.txt
+-rw-r--r-- 1 e.kivotova domain users   11 Oct 24 19:26 ex2.txt
+-rw-r--r-- 1 e.kivotova domain users 1428 Oct 24 20:06 ex3.txt
+
+660 = 110 110 000 = rw-rw---- => owner has r and w permitions, group too, others - no permitions
+775 = 111 111 101 = rwxrwxr-x => owner and group has all permitions, other only r and x
+777 = 111 111 111 = rwxrwxrwx => all three has all permitions
